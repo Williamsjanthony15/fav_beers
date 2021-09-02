@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <h1>Delete a beer</h1>
+        <form = action="" method="POST">
+
+    <!-- Cross site request forgery When using forms... MUST HAVE THIS...-->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="OK">
+    </form>        
+{% endblock content %}
